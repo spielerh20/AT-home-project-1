@@ -1,0 +1,33 @@
+int l_motor = 0;
+int r_motor = 3;
+int speed = 50; 
+int pause = 500;
+int l_bump = 0;
+int r_bump = 3;
+
+void forwards(){
+   motor(l_motor,speed);// def for it go forward 
+   motor(r_motor,speed);
+}
+void right_turn(){
+   motor(l_motor,speed);//def fo it to turn right
+   motor(r_motor,-speed);
+}
+
+int main()
+{
+	while(digital(r_bump)==0){
+	forwards();	
+	}//approach wall
+	ao();
+	msleep(pause);
+	
+	while(digital(l_bump)==0){
+	right_turn();	
+	}// turn right and straighten out after touching wall
+	ao();
+	msleep(pause);
+
+	
+	return 0;
+}
