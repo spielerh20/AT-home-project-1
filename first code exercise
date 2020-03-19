@@ -1,9 +1,10 @@
+{
 int l_motor = 0;
-int r_motor = 3;
+int r_motor = 2;
 int speed = 50; 
 int pause = 500;
-int l_bump = 0;
-int r_bump = 3;
+int l_bump = 8;
+int r_bump = 9;
 
 void forwards(){
    motor(l_motor,speed);// def for it go forward 
@@ -30,4 +31,5 @@ int main()
 
 	
 	return 0;
+}
 }
